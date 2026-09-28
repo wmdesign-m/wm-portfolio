@@ -9,7 +9,9 @@ WordPress化へ進むための作業一覧。作業の完了は実際に確認�
 - [x] **TOP Works・SNSの見出し・意味構造**：Works（`.sec-works`）とSNS（`.sec-sns`）のHeading Structure確認はユーザー確認済み。
 - [x] **その他の見出し・意味構造**：残りのTOPセクションとAbout / Works / WM Journal / Contactの見出し階層、セクションの意味、見出しIDと`aria-labelledby`の対応、SNSリンク構造を確認。見出しレベルの飛び・ID重複・`aria-labelledby`の参照切れはなく、現在のVisual Designを維持したまま構造を確認済み。
 - [x] **全ページの実表示確認**：TOP / About / Works / WM Journal / Contactをユーザーが目視確認済み。Responsive表示も確認済み。
-- [ ] **全ページの操作・状態確認**：全ページのHTML / CSS / JavaScriptを静的に確認済み。Mobile Menu、Hero動画、Works Filter、Contactフォームの実装をコードで確認。About CTAのFocus / Reduced Motion修正、およびContactの6つの選択肢のマウスカーソルとラジオグループのTab / 矢印キー動作はユーザー確認済み。残る各ページの操作・Focus確認とConsole Error確認は未完了。
+- [ ] **全ページの操作・状態確認**：全ページのHTML / CSS / JavaScriptを静的に確認済み。Tab / Shift + Tab、Enter / Space、ラジオボタンの矢印キー、Escape、Focus表示はユーザー確認済み。About CTAのFocus / Reduced Motion修正とContactの6つの選択肢のマウスカーソルも確認済み。
+  - **Footer Logoの枠線**：公開中のTOPで比較。マウスだけで重ねた場合は枠なし、TabでFocusした後にポインターを重ねると枠が表示された。CSSの独自Hover枠線ではなく、ブラウザー標準のFocus輪郭（computed style: `outline-style: auto`）と確認。二重のCSS指定ではない。今回の確認環境では輪郭は濃色に見え、ユーザー環境で白く見える色の差は未確認。キーボード操作時のFocus表示は維持する。
+  - **Console**：「Lazy-loaded images should have explicit dimensions」と404を確認。Drive上および公開中TOPのLazy-loaded画像にはwidth / height属性が設定されている。今回のブラウザー確認ではサイト由来の同警告・404を再現できず、404の対象URLも未特定。ファビコン一式はDrive上の全5ページのheadと`site.webmanifest`へ設定済みだが、公開サイトにはまだファビコン参照が反映されていない。更新を公開後、ユーザー環境で対象URLと状態を再確認する。Console調査が残るため、この項目は未完了。
 - [ ] **Typographyと読みやすさ**：10〜13pxの情報として読む文字、切替前後の文字サイズ、ブラウザの文字サイズ設定、200% Zoomを確認する。必要なfont-sizeのみrem化やサイズ調整を検討し、Brand Typographyと見出しの強弱を保つ。
 - [ ] **WordPress移行設計**：採用するテーマ構成、Header / Footer / CTA等の共通部品と更新単位を整理する。WorksのCustom Post Type・分類・必要な入力項目・共通Single、WM Journalの標準Posts・Archive / Single・4カテゴリ、必要なPattern、Contact FormとPrivacy Policy固定ページの方針を決める。入力項目や独自Blockを増やしすぎない。
 
@@ -48,6 +50,12 @@ WordPress化へ進むための作業一覧。作業の完了は実際に確認�
 - [ ] **SEOと公開設定**：各ページのtitle / description、canonical、OGP画像と各種OGP・X Card、favicon / apple-touch-icon、robots・index / noindex、HTTPS、本番URL、HTTP Status、OGP Previewを確認する。
 - [ ] **更新性**：Worksと記事を各1件追加・編集し、分類・一覧・詳細・TOPへの反映を確認する。必要な操作手順を残す。
 
+## 2026-09-28の反映内容
+
+- ファビコン一式（PNG / SVG / ICO / Web App Manifest）を`images/favicon/`に配置。
+- TOP / About / Works / Blog / Contactの全5ページのheadにファビコン、Apple Touch Icon、manifestの参照を追加。GitHub Pagesのサブパスでも読み込めるよう、`images/favicon/...`の相対パスを使用。
+- `site.webmanifest`内のアプリアイコン参照も、同じフォルダ内で解決する相対パスに変更。
+- 変更はDrive上の静的サイトソースに反映済み。公開後に各アイコンの読み込みとConsoleの404が解消したかを確認する。公開確認まではConsole確認を完了扱いにしない。
 ## 完了済みの要約
 
 以下は元のTODOで完了として記録された作業の要約。横断の最終実表示やWordPress上の動作確認まで完了したという意味ではない。
@@ -66,3 +74,5 @@ WordPress化へ進むための作業一覧。作業の完了は実際に確認�
 - CSSの全面リファクタリングや不要なデザイン変更は、この移行の前提条件にしない。
 - `CHANGELOG.md`の既存履歴は維持し、WordPress化で行った変更は今後追記する。
 - Portfolio完了後の「WM Design共通Web制作標準」へのSkill分離は、公開作業とは別に検討する。
+
+

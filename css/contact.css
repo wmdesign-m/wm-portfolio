@@ -214,7 +214,6 @@ fieldset.form__group .form__label {
   font-size: 13px;
   color: var(--clr-text-sub);
 
-  cursor: pointer;
   border: 1px solid var(--clr-border);
   border-radius: 0;
   background: var(--clr-surface);
@@ -225,6 +224,11 @@ fieldset.form__group .form__label {
     background-color 0.2s;
 
   user-select: none;
+}
+.form__radio,
+.form__radio input,
+.form__radio-custom {
+  cursor: pointer;
 }
 .form__radio:has(input:checked) {
   border-color: var(--clr-primary);

@@ -6,8 +6,10 @@ WordPress化へ進むための作業一覧。作業の完了は実際に確認�
 
 静的版の全面的な作り直しは行わない。移行時に手戻りを生む問題を確認し、必要な箇所だけ修正してWordPress実装を始める。
 
-- [✕ ] **見出し・意味構造**：TOPのWorks（`.sec-works`）とSNS（`.sec-sns`）を優先し、全ページの見出し階層、セクションの意味、SNSリンクの構造を確認する。見た目のために見出しレベルを決めず、現在のVisual Designを維持する。
-- [ ] **全ページの実表示と操作**：TOP / About / Works / WM Journal / Contactを主要幅と切替前後（特に980px、768px、375px、360px付近）で確認する。Header / Footer / CTA、横スクロール、改行、画像、Hover、Keyboard / Focus、Mobile Menu、Reduced Motion、Console Errorを一巡する。下層ページの768px / 767px / 375px / 360px付近を優先する。
+- [x] **TOP Works・SNSの見出し・意味構造**：Works（`.sec-works`）とSNS（`.sec-sns`）のHeading Structure確認はユーザー確認済み。
+- [x] **その他の見出し・意味構造**：残りのTOPセクションとAbout / Works / WM Journal / Contactの見出し階層、セクションの意味、見出しIDと`aria-labelledby`の対応、SNSリンク構造を確認。見出しレベルの飛び・ID重複・`aria-labelledby`の参照切れはなく、現在のVisual Designを維持したまま構造を確認済み。
+- [x] **全ページの実表示確認**：TOP / About / Works / WM Journal / Contactをユーザーが目視確認済み。Responsive表示も確認済み。
+- [ ] **全ページの操作・状態確認**：全ページのHTML / CSS / JavaScriptを静的に確認済み。Mobile Menu、Hero動画、Works Filter、Contactフォームの実装をコードで確認。About CTAのFocus / Reduced Motion修正、およびContactの6つの選択肢のマウスカーソルとラジオグループのTab / 矢印キー動作はユーザー確認済み。残る各ページの操作・Focus確認とConsole Error確認は未完了。
 - [ ] **Typographyと読みやすさ**：10〜13pxの情報として読む文字、切替前後の文字サイズ、ブラウザの文字サイズ設定、200% Zoomを確認する。必要なfont-sizeのみrem化やサイズ調整を検討し、Brand Typographyと見出しの強弱を保つ。
 - [ ] **WordPress移行設計**：採用するテーマ構成、Header / Footer / CTA等の共通部品と更新単位を整理する。WorksのCustom Post Type・分類・必要な入力項目・共通Single、WM Journalの標準Posts・Archive / Single・4カテゴリ、必要なPattern、Contact FormとPrivacy Policy固定ページの方針を決める。入力項目や独自Blockを増やしすぎない。
 
@@ -56,6 +58,7 @@ WordPress化へ進むための作業一覧。作業の完了は実際に確認�
 - Hero動画の約2.57MBへの最適化、WebP Posterと`preload="metadata"`の設定、Brown / White Logo SVGの最適化
 - Works画像9件の形式・容量・Lazy Load確認
 - WorksはCustom Post Typeと共通Single Template、WM Journalは標準Postsで構築する方針の決定
+- TOP / About / Works / WM Journal / Contactのレスポンシブ表示を全ページ目視確認
 
 ## 運用メモ
 

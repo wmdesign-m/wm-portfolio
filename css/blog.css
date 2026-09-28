@@ -150,10 +150,11 @@
   grid-template-columns: minmax(140px, 220px) minmax(0, 560px);
   gap: clamp(26px, 4vw, 54px);
   align-items: center;
+  justify-content: center;
 }
 
 .about-editor__photo {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background: var(--clr-surface);
   overflow: hidden;
 }
@@ -172,10 +173,11 @@
 .about-editor__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4.6vw, 4.6rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .about-editor__text {
@@ -195,19 +197,28 @@
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid var(--clr-primary-strong);
   color: var(--clr-primary-strong);
   text-decoration: none;
   transition:
     color 0.25s ease,
-    border-color 0.25s ease,
     transform 0.25s ease;
+}
+
+.about-editor__link--social {
+  width: 44px;
+  justify-content: center;
+}
+
+.about-editor__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .about-editor__links a:hover {
     color: var(--clr-text);
-    border-color: var(--clr-primary-strong);
     transform: translateY(-2px);
   }
 }
@@ -245,6 +256,10 @@
     gap: 26px;
     padding-inline: 2px;
   }
+
+  .magazine-coming-soon__inner {
+    text-align: left;
+  }
 }
 @media (max-width: 599px) {
   .magazine-masthead__lead {
@@ -268,6 +283,21 @@
 
   .about-editor__photo {
     width: min(100%, 220px);
+    margin-inline: auto;
+  }
+
+  .about-editor__body {
+    width: min(100%, 560px);
+    justify-self: center;
+    text-align: left;
+  }
+
+  .about-editor__text {
+    text-align: left;
+  }
+
+  .about-editor__links {
+    justify-content: center;
   }
 }
 

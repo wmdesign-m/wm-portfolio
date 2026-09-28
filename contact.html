@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — WM Design</title>
+    <meta
+      name="description"
+      content="WM Designへのお問い合わせ。Webサイト制作・WordPress構築・LP制作など、お気軽にご相談ください。"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="メインナビゲーション">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">
+            <img
+              src="images/wm-design-signature-brown.svg"
+              alt="WM Design"
+              class="nav__logo-img"
+              width="500"
+              height="100"
+            />
+          </a>
+          <div class="nav__links">
+            <a href="works.html" class="nav__link">Works</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="blog.html" class="nav__link">Blog</a>
+            <a href="contact.html" class="nav__cta" aria-current="page">
+              Contact
+            </a>
+          </div>
+          <button
+            class="nav__hamburger"
+            type="button"
+            aria-label="メニューを開く"
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      <nav
+        id="mobile-navigation"
+        class="nav__mobile"
+        aria-label="モバイルナビゲーション"
+      >
+        <a href="works.html" class="nav__link">Works</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link active" aria-current="page">
+          Contact
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header contact-header">
+        <div class="container">
+          <div class="sec-label fade-up">Contact</div>
+          <h1 class="page-header__title fade-up" data-delay="80">
+            まずは、お話を<br />聞かせてください。
+          </h1>
+          <p class="contact-header__sub fade-up" data-delay="160">
+            Webサイト制作やWordPress構築について、まだ具体的に決まっていない段階でも大丈夫です。お悩みやご希望をお聞かせください。
+          </p>
+        </div>
+      </header>
+
+      <section
+        class="contact-information"
+        aria-labelledby="contact-information-title"
+      >
+        <div class="container">
+          <div class="contact-information__intro fade-up">
+            <p class="sec-label">Contact Information</p>
+            <h2
+              id="contact-information-title"
+              class="contact-information__title"
+            >
+              ご相談について
+            </h2>
+            <div class="contact-information__text">
+              <p>
+                Webサイトを作りたいけれど、何から決めればよいか分からない。そんな段階からでもご相談いただけます。
+              </p>
+              <p>
+                お悩みやご希望を伺いながら、目的や必要なページ、制作方法を一緒に整理していきます。
+              </p>
+            </div>
+          </div>
+          <dl class="contact-information__list">
+            <div class="contact-information__item fade-up">
+              <dt>
+                <span class="contact-information__label">Response</span>
+                <span class="contact-information__heading">ご返信について</span>
+              </dt>
+              <dd>通常2〜3営業日以内</dd>
+            </div>
+            <div class="contact-information__item fade-up" data-delay="80">
+              <dt>
+                <span class="contact-information__label">Services</span>
+                <span class="contact-information__heading">対応できること</span>
+              </dt>
+              <dd>Design / Coding / WordPress / STUDIO</dd>
+            </div>
+            <div class="contact-information__item fade-up" data-delay="160">
+              <dt>
+                <span class="contact-information__label">Approach</span>
+                <span class="contact-information__heading">制作について</span>
+              </dt>
+              <dd>デザインから実装まで一貫して対応</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="contact-main" aria-labelledby="contact-form-title">
+        <div class="container">
+          <h2 id="contact-form-title" class="visually-hidden">
+            お問い合わせフォームとご相談のガイド
+          </h2>
+          <div class="contact__layout">
+            <!-- Form -->
+            <div class="contact__form-wrap fade-up">
+              <form
+                class="contact__form"
+                id="contactForm"
+                aria-describedby="formDemoNote"
+                novalidate
+              >
+                <p class="form__note" id="formDemoNote">
+                  このフォームはデモです。実際の送信は行われません。
+                </p>
+                <div class="form__group">
+                  <label class="form__label" for="name">
+                    お名前
+                    <span class="form__req">必須</span>
+                  </label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="山田 花子"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="email">
+                    メールアドレス
+                    <span class="form__req">必須</span>
+                  </label>
+                  <input
+                    class="form__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="company">
+                    会社名・屋号
+                    <span class="form__opt">任意</span>
+                  </label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    id="company"
+                    name="company"
+                    autocomplete="organization"
+                    placeholder="株式会社〇〇 / 〇〇サロン"
+                  />
+                </div>
+
+                <fieldset class="form__group">
+                  <legend class="form__label">
+                    お問い合わせ内容
+                    <span class="form__req">必須</span>
+                  </legend>
+
+                  <div class="form__radios">
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="website"
+                        class="visually-hidden"
+                        required
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      Webサイト制作
+                    </label>
+
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="lp"
+                        class="visually-hidden"
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      LP制作
+                    </label>
+
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="coding"
+                        class="visually-hidden"
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      コーディングのみ
+                    </label>
+
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="site-improvement"
+                        class="visually-hidden"
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      既存サイトの改善・修正
+                    </label>
+
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="banner"
+                        class="visually-hidden"
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      広告・SNSバナー制作
+                    </label>
+
+                    <label class="form__radio">
+                      <input
+                        type="radio"
+                        name="type"
+                        value="other"
+                        class="visually-hidden"
+                      />
+                      <span
+                        class="form__radio-custom"
+                        aria-hidden="true"
+                      ></span>
+                      その他・相談
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="form__group">
+                  <label class="form__label" for="budget">
+                    ご予算
+                    <span class="form__opt">任意</span>
+                  </label>
+                  <select class="form__select" id="budget" name="budget">
+                    <option value="">選択してください</option>
+                    <option value="under20">20万円未満</option>
+                    <option value="20to30">20〜30万円</option>
+                    <option value="30to40">30〜40万円</option>
+                    <option value="40to60">40〜60万円</option>
+                    <option value="over60">60万円以上</option>
+                    <option value="consult">
+                      まだ決まっていない・相談したい
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="message">
+                    ご相談内容
+                    <span class="form__req">必須</span>
+                  </label>
+                  <textarea
+                    class="form__textarea"
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="サイトの目的やご希望、現在のお悩み、公開希望時期など、決まっている範囲でお気軽にお書きください。"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form__group form__privacy">
+                  <label class="form__check">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="privacy"
+                      class="visually-hidden"
+                      required
+                    />
+                    <span class="form__check-custom" aria-hidden="true"></span>
+                    <span>
+                      <!-- 公開前にPrivacy Policyの本番URLへ接続する。現時点では仮リンク。 -->
+                      <a href="#" class="form__privacy-link"
+                        >プライバシーポリシー</a
+                      >に同意する
+                    </span>
+                  </label>
+                </div>
+
+                <div
+                  id="formMsg"
+                  class="form__message"
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                  tabindex="-1"
+                ></div>
+
+                <button class="btn btn--primary form__submit" type="submit">
+                  送信する
+                  <svg
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    aria-hidden="true"
+                  >
+                    <path d="M1 7h12M7 1l6 6-6 6" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Guide -->
+            <aside
+              class="contact__info fade-up"
+              data-delay="120"
+              aria-label="ご相談のガイド"
+            >
+              <div class="info__block">
+                <p class="sec-label">Before You Contact</p>
+                <h3 class="info__title">ご相談の前に</h3>
+                <p class="info__text">
+                  ご相談内容がまだ具体的でなくても問題ありません。分かる範囲でご記入ください。
+                </p>
+              </div>
+              <div class="info__block">
+                <p class="sec-label">Response</p>
+                <h3 class="info__title">ご返信について</h3>
+                <p class="info__text">通常2〜3営業日以内にご返信いたします。</p>
+              </div>
+              <div class="info__block">
+                <p class="sec-label">About Your Project</p>
+                <h3 class="info__title">ご相談内容について</h3>
+                <p class="info__text">
+                  ご希望の内容・公開時期・ご予算など、決まっている範囲でお知らせいただけるとご案内がスムーズです。
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div>
+          <a href="index.html" class="footer__logo"
+            ><img
+              src="images/logo-brown.png"
+              alt="WM Design"
+              class="footer__logo-img"
+              width="800"
+              height="800"
+              loading="lazy"
+          /></a>
+          <p class="footer__tagline">Design &amp; Build with Care.</p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="works.html">Works</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 WM Design. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

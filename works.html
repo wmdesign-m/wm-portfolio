@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Works — WM Design</title>
+    <meta
+      name="description"
+      content="WM Designの制作実績をご紹介します。Webデザイン、HTML・CSS・JavaScriptによるコーディング、WordPress構築、STUDIOサイト制作まで、目的や運用を考えたWebサイトを制作しています。"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/works.css" />
+  </head>
+
+  <body>
+    <!-- ==================================================
+    Navigation
+  ================================================== -->
+    <header class="site-header">
+      <nav class="nav" aria-label="メインナビゲーション">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">
+            <img
+              src="images/wm-design-signature-brown.svg"
+              alt="WM Design"
+              class="nav__logo-img"
+              width="500"
+              height="100"
+            />
+          </a>
+
+          <div class="nav__links">
+            <a href="works.html" class="nav__link active" aria-current="page">
+              Works</a
+            >
+            <a href="about.html" class="nav__link">About</a>
+            <a href="blog.html" class="nav__link">Blog</a>
+            <a href="contact.html" class="nav__cta">Contact</a>
+          </div>
+
+          <button
+            class="nav__hamburger"
+            type="button"
+            aria-label="メニューを開く"
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <nav
+        id="mobile-navigation"
+        class="nav__mobile"
+        aria-label="モバイルナビゲーション"
+      >
+        <a href="works.html" class="nav__link active" aria-current="page">
+          Works
+        </a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ==================================================
+      Page Header
+    ================================================== -->
+      <header class="page-header">
+        <div class="container">
+          <div class="sec-label fade-up">Works</div>
+
+          <h1 class="page-header__title fade-up" data-delay="80">
+            想いや目的を整理し、<br />伝わる形にした制作実績。
+          </h1>
+        </div>
+      </header>
+
+      <!-- ==================================================
+      Works Introduction
+    ================================================== -->
+      <section class="works-intro">
+        <div class="container">
+          <p class="works-intro__text fade-up">
+            Webデザインからコーディング、WordPress、STUDIOまで。
+            目的やターゲットを整理し、伝わりやすさと運用のしやすさを考えて制作しています。
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================================================
+      Works Filter
+    ================================================== -->
+      <section class="works-filter" aria-labelledby="works-filter-title">
+        <div class="container">
+          <h2 id="works-filter-title" class="visually-hidden">
+            制作実績をカテゴリーで絞り込む
+          </h2>
+
+          <div
+            class="filter__list"
+            role="group"
+            aria-label="制作実績カテゴリー"
+          >
+            <button
+              class="filter__btn active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+
+            <button
+              class="filter__btn"
+              type="button"
+              data-filter="coding"
+              aria-pressed="false"
+            >
+              Coding
+            </button>
+
+            <button
+              class="filter__btn"
+              type="button"
+              data-filter="wordpress"
+              aria-pressed="false"
+            >
+              WordPress
+            </button>
+
+            <button
+              class="filter__btn"
+              type="button"
+              data-filter="studio"
+              aria-pressed="false"
+            >
+              STUDIO
+            </button>
+
+            <button
+              class="filter__btn"
+              type="button"
+              data-filter="design"
+              aria-pressed="false"
+            >
+              Design
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+      Works Archive
+    ================================================== -->
+      <section class="works-main" aria-labelledby="works-list-title">
+        <div class="container">
+          <h2 id="works-list-title" class="visually-hidden">制作実績一覧</h2>
+
+          <div class="wgrid" id="works-list" aria-live="polite">
+            <!-- ==============================================
+            Works 01
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-cat="coding design">
+              <a
+                href="works-detail-space.html"
+                class="wcard__link"
+                aria-label="SPACE inc.の制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/site-space.webp"
+                    alt="SPACE inc. コーポレートサイトのPC・スマートフォンモックアップ"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 01 </span>
+
+                    <span class="wcard__type"> Corporate Website </span>
+                  </div>
+
+                  <h3 class="wcard__title">SPACE inc.</h3>
+
+                  <p class="wcard__desc">
+                    内装施工会社を想定し、情報設計からデザイン・実装まで再構築。信頼感と事業内容の伝わりやすさを意識したコーポレートサイトです。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Design</li>
+                    <li class="tag">HTML</li>
+                    <li class="tag">CSS</li>
+                    <li class="tag">JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 02
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article
+              class="wcard fade-up"
+              data-delay="80"
+              data-cat="studio design"
+            >
+              <a
+                href="works-detail-repos.html"
+                class="wcard__link"
+                aria-label="Reposの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/site-repos.webp"
+                    alt="Repos サロンサイトのPC・スマートフォンモックアップ"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 02 </span>
+
+                    <span class="wcard__type"> Salon Website </span>
+                  </div>
+
+                  <h3 class="wcard__title">Repos</h3>
+
+                  <p class="wcard__desc">
+                    プライベートエステサロンを想定し、余白と写真を活かして設計。落ち着きと上質さ、予約への自然な導線を意識したサイトです。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Design</li>
+                    <li class="tag">STUDIO</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 03
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-delay="160" data-cat="design">
+              <a
+                href="works-detail-care-link.html"
+                class="wcard__link"
+                aria-label="Care Linkの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/carelink.webp"
+                    alt="Care Link UI/UXプロトタイプのPC・スマートフォンモックアップ"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 03 </span>
+
+                    <span class="wcard__type"> UI/UX Design </span>
+                  </div>
+
+                  <h3 class="wcard__title">Care Link</h3>
+
+                  <p class="wcard__desc">
+                    家族と介護職員を日々の記録でつなぐコミュニケーションアプリ。チームでUI/UX設計からプロトタイプ制作まで行いました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">UI/UX</li>
+                    <li class="tag">Figma</li>
+                    <li class="tag">Prototype</li>
+                    <li class="tag">Team Project</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 04
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-cat="coding design">
+              <a
+                href="works-detail-lumiere.html"
+                class="wcard__link"
+                aria-label="Lumière Nail Salonの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/site-lumiere.webp"
+                    alt="Lumière Nail Salon サイトのPC・スマートフォンモックアップ"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 04 </span>
+
+                    <span class="wcard__type"> Salon Website </span>
+                  </div>
+
+                  <h3 class="wcard__title">Lumière Nail Salon</h3>
+
+                  <p class="wcard__desc">
+                    ネイルサロンを想定し、上品さと親しみやすさを両立。情報を整理し、予約まで迷わず進める構成を意識して制作しました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Design</li>
+                    <li class="tag">HTML</li>
+                    <li class="tag">CSS</li>
+                    <li class="tag">JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 05
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article
+              class="wcard fade-up"
+              data-delay="80"
+              data-cat="coding design"
+            >
+              <a
+                href="works-detail-ember-coffee.html"
+                class="wcard__link"
+                aria-label="EMBER COFFEEの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/site-embercoffee.webp"
+                    alt="EMBER COFFEE カフェサイトのPC・スマートフォンモックアップ"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 05 </span>
+
+                    <span class="wcard__type"> Cafe Website </span>
+                  </div>
+
+                  <h3 class="wcard__title">EMBER COFFEE</h3>
+
+                  <p class="wcard__desc">
+                    コーヒーショップを想定し、写真とタイポグラフィを活かした世界観を設計。余白とレスポンシブ表現にも配慮して実装しました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Design</li>
+                    <li class="tag">HTML</li>
+                    <li class="tag">CSS</li>
+                    <li class="tag">JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 06
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-delay="160" data-cat="design">
+              <a
+                href="works-detail-valentines-selection.html"
+                class="wcard__link"
+                aria-label="Valentine’s Selectionの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/banner-chocolate.webp"
+                    alt="Valentine’s Selection チョコレート特集のWebバナー"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 06 </span>
+
+                    <span class="wcard__type"> Web Banner </span>
+                  </div>
+
+                  <h3 class="wcard__title">Valentine’s Selection</h3>
+
+                  <p class="wcard__desc">
+                    バレンタイン特集を想定したWebバナー。チョコレートの質感と落ち着いた配色を活かし、上品で印象に残るビジュアルを制作しました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Photoshop</li>
+                    <li class="tag">Banner Design</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 07
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-cat="design">
+              <a
+                href="works-detail-web-design-seminar.html"
+                class="wcard__link"
+                aria-label="Web Design Seminarの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/banner-seminar.webp"
+                    alt="Web Design Seminar 講座集客用Instagram広告"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 07 </span>
+
+                    <span class="wcard__type"> Instagram Advertisement </span>
+                  </div>
+
+                  <h3 class="wcard__title">Web Design Seminar</h3>
+
+                  <p class="wcard__desc">
+                    Webデザイン講座の集客を想定したSNS広告。開催情報と価格の優先順位を整理し、短時間でも内容が伝わる構成にしました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Figma</li>
+                    <li class="tag">Social Media Design</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 08
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-delay="80" data-cat="design">
+              <a
+                href="works-detail-sakura-festival.html"
+                class="wcard__link"
+                aria-label="Sakura Festivalの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/flyer-sakuramatsuri.webp"
+                    alt="Sakura Festival 春の地域イベント告知フライヤー"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 08 </span>
+
+                    <span class="wcard__type"> Event Flyer </span>
+                  </div>
+
+                  <h3 class="wcard__title">Sakura Festival</h3>
+
+                  <p class="wcard__desc">
+                    春の地域イベントを想定したフライヤー。桜の華やかさを活かしながら、日時・会場・イベント内容を整理して設計しました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Figma</li>
+                    <li class="tag">Flyer Design</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <!-- ==============================================
+            Works 09
+            WordPress化後：
+            カスタム投稿「Works」のループに置き換える想定
+          =============================================== -->
+            <article class="wcard fade-up" data-delay="160" data-cat="design">
+              <a
+                href="works-detail-strawberry-picking.html"
+                class="wcard__link"
+                aria-label="Strawberry Pickingの制作実績を見る"
+              >
+                <div class="wcard__thumb">
+                  <img
+                    src="images/flyer-strawberry.webp"
+                    alt="Strawberry Picking いちご狩り告知フライヤー"
+                    class="wcard__image"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+
+                  <div class="wcard__overlay" aria-hidden="true">
+                    <span class="wcard__view"> View Project </span>
+                  </div>
+                </div>
+
+                <div class="wcard__body">
+                  <div class="wcard__meta">
+                    <span class="wcard__number"> 09 </span>
+
+                    <span class="wcard__type"> Promotional Flyer </span>
+                  </div>
+
+                  <h3 class="wcard__title">Strawberry Picking</h3>
+
+                  <p class="wcard__desc">
+                    ファミリー層向けのいちご狩り告知を想定。楽しさと親しみやすさを表現しながら、料金や特徴をひと目で把握できるよう整理しました。
+                  </p>
+
+                  <ul class="wcard__tags" aria-label="担当範囲">
+                    <li class="tag">Figma</li>
+                    <li class="tag">Flyer Design</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- JavaScript無効時や絞り込み結果がない場合に使用 -->
+          <p class="works-empty" id="works-empty" hidden>
+            WordPressの制作実績は、現在準備中です。
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================================================
+      Works Policy
+    ================================================== -->
+      <section class="works-policy">
+        <div class="container">
+          <div class="works-policy__inner">
+            <div class="works-policy__heading fade-up">
+              <div class="sec-label">Approach</div>
+
+              <h2 class="works-policy__title">
+                見た目だけでなく、<br />
+                その先の使いやすさまで。
+              </h2>
+            </div>
+
+            <div class="works-policy__body">
+              <p class="works-policy__text fade-up">
+                Webサイトは、公開することがゴールではありません。
+                ユーザーに情報が伝わること、事業の信頼につながること、
+                そして公開後も無理なく運用できることが大切だと考えています。
+              </p>
+
+              <ul class="works-policy__list">
+                <li class="works-policy__item fade-up" data-delay="0">
+                  <span class="works-policy__number"> 01 </span>
+
+                  <div>
+                    <h3 class="works-policy__name">目的と情報を整理する</h3>
+
+                    <p class="works-policy__desc">
+                      ターゲットやサイトの目的を確認し、
+                      必要な情報と優先順位を整理します。
+                    </p>
+                  </div>
+                </li>
+
+                <li class="works-policy__item fade-up" data-delay="80">
+                  <span class="works-policy__number"> 02 </span>
+
+                  <div>
+                    <h3 class="works-policy__name">デザインを丁寧に実装する</h3>
+
+                    <p class="works-policy__desc">
+                      デザインの意図を読み取りながら、
+                      レスポンシブ表示や操作性にも配慮して実装します。
+                    </p>
+                  </div>
+                </li>
+
+                <li class="works-policy__item fade-up" data-delay="160">
+                  <span class="works-policy__number"> 03 </span>
+
+                  <div>
+                    <h3 class="works-policy__name">更新しやすく設計する</h3>
+
+                    <p class="works-policy__desc">
+                      制作方法や公開後の運用を考え、
+                      更新しやすく管理しやすいサイト設計を目指します。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+      Contact CTA
+    ================================================== -->
+      <section class="works-cta">
+        <div class="container">
+          <div class="works-cta__inner fade-up">
+            <p class="works-cta__label">Start a Project</p>
+
+            <h2 class="works-cta__title">
+              Webサイトについて、<br />
+              一緒に考えてみませんか。
+            </h2>
+
+            <p class="works-cta__text">
+              まだ内容がまとまっていない段階でも大丈夫です。
+              ご希望やお悩みを伺いながら、必要な制作内容を一緒に整理します。
+            </p>
+
+            <a href="contact.html" class="btn btn--primary">
+              お問い合わせ
+
+              <svg
+                viewBox="0 0 14 14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+                aria-hidden="true"
+              >
+                <path d="M1 7h12M7 1l6 6-6 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================================================
+    Footer
+  ================================================== -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div>
+          <a href="index.html" class="footer__logo">
+            <img
+              src="images/logo-brown.png"
+              alt="WM Design"
+              class="footer__logo-img"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+          </a>
+
+          <p class="footer__tagline">Design &amp; Build with Care.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="works.html">Works</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 WM Design. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/works.js"></script>
+  </body>
+</html>

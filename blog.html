@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — WM Design</title>
+    <meta
+      name="description"
+      content="心地よく働き、心地よく暮らす。仕事道具、暮らし、レビュー、働き方の実体験を綴るWM DesignのWebマガジンです。"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+
+  <body class="magazine-page">
+    <header class="site-header">
+      <nav class="nav" aria-label="メインナビゲーション">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">
+            <img
+              src="images/wm-design-signature-brown.svg"
+              alt="WM Design"
+              class="nav__logo-img"
+              width="500"
+              height="100"
+            />
+          </a>
+          <div class="nav__links">
+            <a href="works.html" class="nav__link">Works</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="blog.html" class="nav__link active" aria-current="page">
+              Blog
+            </a>
+            <a href="contact.html" class="nav__cta">Contact</a>
+          </div>
+          <button
+            class="nav__hamburger"
+            type="button"
+            aria-label="メニューを開く"
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <nav
+        id="mobile-navigation"
+        class="nav__mobile"
+        aria-label="モバイルナビゲーション"
+      >
+        <a href="works.html" class="nav__link">Works</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="blog.html" class="nav__link active" aria-current="page"
+          >Blog</a
+        >
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+    </header>
+
+    <main class="magazine-main">
+      <header class="magazine-masthead" aria-labelledby="magazine-title">
+        <div class="container magazine-masthead__inner">
+          <p class="magazine-masthead__kicker magazine-reveal">
+            Web Magazine by WM Design
+          </p>
+          <h1
+            id="magazine-title"
+            class="magazine-masthead__title magazine-reveal"
+          >
+            WM Journal
+          </h1>
+          <p class="magazine-masthead__theme magazine-reveal">
+            心地よく働き、心地よく暮らす。
+          </p>
+          <p class="magazine-masthead__lead magazine-reveal">
+            仕事を整える道具、日々の暮らし、実際に使ったものについて綴るWebマガジン。
+          </p>
+        </div>
+      </header>
+
+      <nav class="magazine-nav" aria-label="WM Journalカテゴリ">
+        <div class="container magazine-nav__inner">
+          <ul class="magazine-nav__list">
+            <li class="magazine-nav__item is-current">All</li>
+            <li class="magazine-nav__item">Workspace</li>
+            <li class="magazine-nav__item">Lifestyle</li>
+            <li class="magazine-nav__item">Review</li>
+            <li class="magazine-nav__item">Workstyle</li>
+          </ul>
+        </div>
+      </nav>
+
+      <section
+        class="magazine-coming-soon magazine-reveal"
+        aria-labelledby="coming-soon-title"
+      >
+        <div class="container magazine-coming-soon__inner">
+          <p class="magazine-coming-soon__label">Coming Soon</p>
+
+          <h2 id="coming-soon-title" class="magazine-coming-soon__title">
+            WM Journalを準備しています。
+          </h2>
+
+          <p class="magazine-coming-soon__text">
+            仕事を整える道具や日々の暮らし、
+            実際に使ったものについて、少しずつ綴っていきます。
+          </p>
+        </div>
+      </section>
+
+      <aside class="about-editor" aria-labelledby="about-editor-title">
+        <div class="container about-editor__inner">
+          <div class="about-editor__photo" aria-hidden="true">
+            <picture>
+              <img
+                src="images/blog/blog-editor-profile.webp"
+                alt=""
+                width="480"
+                height="600"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="about-editor__body magazine-reveal">
+            <p class="about-editor__label">About the Editor</p>
+            <h2 id="about-editor-title" class="about-editor__title">
+              Mitsuko Kamata / WM Design
+            </h2>
+            <p class="about-editor__text">
+              仕事道具、暮らし、働き方、実体験を通して、心地よく働き続けるための小さな気付きを綴っています。
+            </p>
+            <div class="about-editor__links">
+              <a href="about.html">About</a>
+              <a href="works.html">Works</a>
+              <a
+                href="https://www.instagram.com/wm_design83105/?hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://x.com/Mitsukowmof"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                X
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div>
+          <a href="index.html" class="footer__logo">
+            <img
+              src="images/logo-brown.png"
+              alt="WM Design"
+              class="footer__logo-img"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+          </a>
+          <p class="footer__tagline">Design &amp; Build with Care.</p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="works.html">Works</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 WM Design. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

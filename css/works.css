@@ -1,0 +1,535 @@
+/* ==========================================
+   works.css
+   WM Design — Works Page
+   ========================================== */
+
+/* ==========================================
+   Works Introduction
+   ========================================== */
+
+.works-intro {
+  padding: 0 0 clamp(64px, 7vw, 96px);
+  background: var(--clr-surface);
+}
+
+.works-intro__text {
+  max-width: 680px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--clr-text-sub);
+}
+
+/* ==========================================
+   Works Filter
+   ========================================== */
+
+.works-filter {
+  padding: var(--sp-m) 0;
+  background: var(--clr-bg);
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.filter__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-text-sub);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transition: color 0.25s;
+}
+
+.filter__btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--clr-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.filter__btn.active,
+.filter__btn[aria-pressed="true"] {
+  color: var(--clr-text);
+}
+
+.filter__btn.active::after,
+.filter__btn[aria-pressed="true"]::after {
+  transform: scaleX(1);
+}
+
+.filter__btn:focus-visible {
+  outline: 1.5px solid var(--clr-primary);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   Works Archive
+   ========================================== */
+
+.works-main {
+  padding: var(--sp-sec) 0;
+  background: var(--clr-surface);
+}
+
+.wgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: clamp(var(--sp-xxl), 7vw, var(--sp-sec-lg));
+  column-gap: clamp(var(--sp-l), 4vw, var(--sp-xl));
+}
+
+/* ==========================================
+   Works Card
+   ========================================== */
+
+.wcard {
+  min-width: 0;
+  transition:
+    opacity 0.35s var(--ease-out),
+    transform 0.35s var(--ease-out);
+}
+
+.wcard[hidden] {
+  display: none;
+}
+
+.wcard__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wcard__link:focus-visible {
+  outline: 1.5px solid var(--clr-primary);
+  outline-offset: 6px;
+}
+
+/* ==========================================
+   Works Card Image
+   ========================================== */
+
+.wcard__thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--sp-m);
+  overflow: hidden;
+  background: var(--clr-bg);
+}
+
+.wcard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.wcard__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-m);
+  background: rgba(var(--clr-text-rgb), 0.24);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.wcard__view {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--clr-surface);
+  transform: translateY(8px);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.wcard__view::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ==========================================
+   Works Card Content
+   ========================================== */
+
+.wcard__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.wcard__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-s);
+  margin-bottom: var(--sp-s);
+}
+
+.wcard__number,
+.wcard__type {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.wcard__number {
+  flex-shrink: 0;
+  color: var(--clr-primary-strong);
+}
+
+.wcard__type {
+  color: var(--clr-text-sub);
+  text-align: right;
+}
+
+.wcard__title {
+  margin-bottom: var(--sp-s);
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 400;
+  line-height: 1.3;
+  transition: color 0.25s;
+}
+
+.wcard__desc {
+  margin-bottom: var(--sp-m);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--clr-text-sub);
+}
+
+.wcard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+/* ==========================================
+   Works Card Hover
+   ========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .filter__btn:hover {
+    color: var(--clr-text);
+  }
+
+  .wcard__link:hover .wcard__image {
+    transform: scale(1.015);
+  }
+
+  .wcard__link:hover .wcard__overlay {
+    opacity: 1;
+  }
+
+  .wcard__link:hover .wcard__view {
+    transform: translateY(0);
+  }
+
+  .wcard__link:hover .wcard__title {
+    color: var(--clr-primary);
+  }
+}
+
+/* ==========================================
+   Empty Message
+   ========================================== */
+
+.works-empty {
+  padding: clamp(72px, 9vw, 120px) 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--clr-text-sub);
+  text-align: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ==========================================
+   Works Policy
+   ========================================== */
+
+.works-policy {
+  padding: var(--sp-sec-lg) 0;
+  background: var(--clr-bg);
+}
+
+.works-policy__inner {
+  display: block;
+}
+
+.works-policy__heading {
+  max-width: 720px;
+  margin-bottom: var(--sp-l);
+}
+
+.works-policy__title {
+  max-width: 13em;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.45;
+}
+
+.works-policy__body {
+  min-width: 0;
+}
+
+.works-policy__text {
+  max-width: 46em;
+  margin-bottom: clamp(64px, 8vw, 112px);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--clr-text-sub);
+}
+
+.works-policy__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 250px));
+  justify-content: center;
+  column-gap: clamp(56px, 7vw, 110px);
+  align-items: start;
+}
+
+.works-policy__item {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+.works-policy__number {
+  display: block;
+  margin-bottom: clamp(28px, 4vw, 48px);
+  color: rgba(var(--clr-text-rgb), 0.16);
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 0;
+}
+
+.works-policy__name {
+  margin-bottom: var(--sp-s);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.works-policy__desc {
+  max-width: 100%;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--clr-text-sub);
+}
+
+/* ==========================================
+   Contact CTA
+   ========================================== */
+
+.works-cta {
+  padding: var(--sp-sec-lg) 0;
+  background: var(--clr-surface);
+}
+
+.works-cta__inner {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.works-cta__label {
+  margin-bottom: var(--sp-m);
+  color: var(--clr-primary-strong);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.works-cta__title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: var(--sp-l);
+}
+
+.works-cta__text {
+  max-width: 42em;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--clr-text-sub);
+}
+
+.works-cta .btn {
+  margin-top: var(--sp-xl);
+}
+
+/* ==========================================
+   Responsive — Tablet
+   ========================================== */
+
+@media (max-width: 980px) {
+
+  .wgrid {
+    gap: var(--sp-xxl) var(--sp-l);
+  }
+
+  .works-policy__title {
+    max-width: 18em;
+  }
+
+  .works-policy__list {
+    grid-template-columns: 1fr;
+    width: min(100%, 560px);
+    margin-inline: auto;
+    row-gap: var(--sp-xxl);
+  }
+}
+
+/* ==========================================
+   Responsive — Mobile
+   ========================================== */
+
+@media (max-width: 767px) {
+  .works-intro {
+    padding: 0 0 var(--sp-xxl);
+  }
+
+  .works-intro__text {
+    line-height: 1.9;
+  }
+
+
+  .filter__list {
+    gap: 8px 24px;
+  }
+
+  .filter__btn {
+    min-height: 36px;
+    padding: 0;
+  }
+
+
+  .wgrid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xxl);
+  }
+
+
+  .wcard__overlay {
+    display: none;
+  }
+
+  .wcard__title {
+    font-size: clamp(21px, 6vw, 26px);
+  }
+
+  .works-policy {
+    padding: var(--sp-sec) 0;
+  }
+
+  .works-policy__text {
+    margin-bottom: var(--sp-xxl);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+}
+
+/* ==========================================
+   Responsive — Small Mobile
+   ========================================== */
+
+@media (max-width: 599px) {
+  .wcard__meta {
+    align-items: flex-start;
+  }
+
+  .wcard__type {
+    max-width: 70%;
+  }
+
+}
+
+/* ==========================================
+   Responsive — 360px
+   ========================================== */
+
+@media (max-width: 360px) {
+  .wcard__meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .wcard__type {
+    max-width: none;
+    text-align: left;
+  }
+
+  .wcard__title br {
+    display: none;
+  }
+
+  .works-policy__title br {
+    display: none;
+  }
+}
+
+/* ==========================================
+   Reduced Motion
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .wcard,
+  .wcard__thumb,
+  .wcard__image,
+  .wcard__overlay,
+  .wcard__view,
+  .wcard__title,
+  .filter__btn,
+  .filter__btn::after {
+    transition: none;
+  }
+
+  .wcard__link:hover .wcard__thumb,
+  .wcard__link:hover .wcard__image,
+  .wcard__link:hover .wcard__view {
+    transform: none;
+  }
+}
